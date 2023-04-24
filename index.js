@@ -10,9 +10,10 @@ app.get('/test', (req, res) => {
     res.sendFile(__dirname + "/index.html")
 })
 app.post('/login', (req, res) => {
-    // const email = req.body.email;
-    // const password = req.body.password;
+    const email = req.body.email;
+    const password = req.body.password;
     console.log(req.body)
+    console.log(email+password)
     res.json(req.body)
 })
 app.listen(port, () => {
